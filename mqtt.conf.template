@@ -1,0 +1,22 @@
+# Type of device. Valid options are 'lookup', 'rm', 'sp1', 'sp2', 'a1', 'mp1'
+device_type = 'rm'
+
+## lookup parameters
+lookup_timeout = 20
+#local_address = '127.0.0.1'
+
+## parameters for direct connection
+device_host = '${DEVICE_HOST}'
+device_mac  = '${DEVICE_MAC}'
+
+## MQTT connection parameters
+mqtt_broker = '${MQTT_SERVER}'
+mqtt_port = ${MQTT_PORT}
+mqtt_clientid = 'broadlink'
+mqtt_username = '${MQTT_USER}'
+mqtt_password = '${MQTT_PASS}'
+mqtt_topic_prefix = '${MQTT_TOPIC_PREFIX}'
+
+## extra parameters
+#broadlink_rm_temperature_interval = 120 # publish temperature from RM device to broadlink/temperature topic every two minutes
+#broadlink_sp_energy_interval = 30 # publish energy from SP device to broadlink/energy topic every 30 seconds
