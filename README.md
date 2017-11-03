@@ -18,3 +18,16 @@ Send value `replay` into topic `broadlink/tv/samsung/power`, in console you shou
 [2017-10-30 03:27:42,943] DEBUG Received MQTT message broadlink/tv/samsung/power replay
 [2017-10-30 03:27:42,943] DEBUG Replaying command from file /app/commands/tv/samsung/power
 ```
+
+Example for docker-compose
+```
+  broadlink-mqtt:
+    image: broadlink-mqtt
+    environment:
+      - MQTT_SERVER=mosquitto
+      - MQTT_TOPIC_PREFIX=broadlink/rm-mini3/
+      - DEVICE_HOST=192.168.1.60
+      - DEVICE_MAC=34:AA:FF:CC:D5:68
+    depends_on:
+      - mosquitto
+```
