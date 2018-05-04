@@ -17,7 +17,9 @@ ENV DEVICE_HOST=192.168.1.50
 ENV DEVICE_MAC=01:23:45:67:ab:00
 
 COPY mqtt.conf.template /app
+COPY commands/ac /app/commands/ac
 COPY start.sh /app
+
 RUN chmod +x start.sh
 
 CMD ["./start.sh"]
