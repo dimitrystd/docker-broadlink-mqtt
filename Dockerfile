@@ -1,6 +1,6 @@
 FROM python:2
 
-RUN pip install paho-mqtt broadlink==0.6
+RUN pip install paho-mqtt broadlink
 
 WORKDIR /app
 RUN wget https://github.com/eschava/broadlink-mqtt/archive/master.tar.gz \
